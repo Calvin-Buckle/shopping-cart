@@ -1,5 +1,6 @@
 import Store from "./components/Store"
 import Cart from "./components/Cart"
+import { Link } from "react-router-dom"
 
 function App() {
 
@@ -8,8 +9,9 @@ function App() {
     <div id="heading">
     <div id="logo"></div>
     <div id="header">Name comes here</div>
-    <button id="storeButton"><Store />Store</button>
-    <button id="cartButton"><Cart />Cart</button>
+    <Link to={'store'}><button id="storeButton" ><Store />Store</button></Link>
+    
+    <Link to={'cart'}><button id="cartButton"><Cart />Cart</button></Link>
     </div>
     <p>Body text.....</p>
     
