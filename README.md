@@ -1,1 +1,1 @@
-This is a fake store app using fake store API
+This is a fake shopping app using fake store API

@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
 
-
-function Store(){
+const Store = () => {
     return (
         <>
-        
+      
         </>
     )
 }

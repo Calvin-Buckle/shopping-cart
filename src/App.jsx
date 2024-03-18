@@ -9,9 +9,9 @@ function App() {
     <div id="heading">
     <div id="logo"></div>
     <div id="header">Name comes here</div>
-    <Link to={'store'}><button id="storeButton" ><Store />Store</button></Link>
+    <Link to={'store'}><button id="storeButton" >Store</button></Link>
     
-    <Link to={'cart'}><button id="cartButton"><Cart />Cart</button></Link>
+    <Link to={'cart'}><button id="cartButton">Cart</button></Link>
     </div>
     <p>Body text.....</p>
     
