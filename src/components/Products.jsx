@@ -13,12 +13,18 @@ function Products() {
   function ProductCard({ dataArr, i }) { 
     return (
       <div className="productContainer">
-        <img src={dataArr[i].image} />
+        
+        <div className="upperContainer">
+          <img className="productImage" src={dataArr[i].image} /></div>
+      <div className="lowerContainer">
         <div className="productName">{dataArr[i].title}</div>
-        <div className="productPrice">{dataArr[i].price}</div>
-        <div className="productRating">{dataArr[i].rating.rate}</div>
-        <div className="productDescription">{dataArr[i].description}</div>
+        <div className="productPrice">Price ${dataArr[i].price}</div>
+        <div className="productRating">Rating {dataArr[i].rating.rate}</div>
+        </div>
+        <div className="buttonContainer">
         <button className="addToCart">Add to Cart</button>
+        </div>
+        
       </div>
     );
   }

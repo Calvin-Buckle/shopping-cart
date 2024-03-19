@@ -7,7 +7,7 @@ const Store = () => {
         <Header />
         <div id="storeName">Store</div>
         <button>Filter</button>
-        <div>
+        <div id="container">
             <Products />
         </div>
         </>
