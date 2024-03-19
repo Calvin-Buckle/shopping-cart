@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Products from "./components/Products"
 
 const Store = () => {
     return (
@@ -6,9 +7,9 @@ const Store = () => {
         <Header />
         <div id="storeName">Store</div>
         <button>Filter</button>
-        <body>
+        <div>
             <Products />
-        </body>
+        </div>
         </>
     )
 }
