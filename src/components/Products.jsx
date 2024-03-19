@@ -1,7 +1,18 @@
+import { useEffect, useState } from "react";
+import { json } from "react-router-dom";
 
 
 
 function Products(){
+  const [dataArr, setDataArr] = useState([])
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products')
+        .then(response => response.json())
+        .then(json => setDataArr(json))
+        
+    },[])
+   
+    console.log(dataArr[0])
     return (
         <>
         <div className="productContainer">
