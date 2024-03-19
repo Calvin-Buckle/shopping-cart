@@ -4,6 +4,11 @@ const Store = () => {
     return (
         <>
         <Header />
+        <div id="storeName">Store</div>
+        <button>Filter</button>
+        <body>
+            <Products />
+        </body>
         </>
     )
 }
