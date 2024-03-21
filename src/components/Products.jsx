@@ -1,4 +1,6 @@
+// Products.js
 import React, { useEffect, useState } from "react";
+import UpdateCart from "./UpdateCart";
 
 function Products() {
   const [dataArr, setDataArr] = useState([]);
@@ -10,33 +12,30 @@ function Products() {
       .catch(error => console.error('Error fetching data:', error));
   }, []);
 
-  function ProductCard({ dataArr, i }) { 
+  function ProductCard({ product }) { 
     return (
       <div className="productContainer">
-        
         <div className="upperContainer">
-          <img className="productImage" src={dataArr[i].image} /></div>
-      <div className="lowerContainer">
-        <div className="productName">{dataArr[i].title}</div>
-        <div className="productPrice">Price ${dataArr[i].price}</div>
-        <div className="productRating">Rating {dataArr[i].rating.rate}</div>
+          <img className="productImage" src={product.image} alt={product.title} />
+        </div>
+        <div className="lowerContainer">
+          <div className="productName">{product.title}</div>
+          <div className="productPrice">Price ${product.price}</div>
+          <div className="productRating">Rating {product.rating.rate}</div>
         </div>
         <div className="buttonContainer">
-        <button className="addToCart">Add to Cart</button>
+          <button className="addToCart" onClick={() => UpdateCart({ product })}>
+            Add to Cart
+          </button>
         </div>
-        
       </div>
     );
   }
 
   function ProductArr() {
-    const productCards = [];
-    
-    dataArr.forEach((product, index) => {
-      productCards.push(<ProductCard key={index} dataArr={dataArr} i={index} />);
-    });
-
-    return productCards;
+    return dataArr.map((product, index) => (
+      <ProductCard key={index} product={product} />
+    ));
   }
 
   return (
