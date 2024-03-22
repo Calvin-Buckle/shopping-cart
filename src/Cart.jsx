@@ -1,5 +1,6 @@
 
 import Header from "./components/Header";
+import { CartArray } from "./components/CartItem";
 function Cart(){
 
     
@@ -9,7 +10,7 @@ function Cart(){
         <Header />
         <div>
             <div>Your shopping cart</div>
-            <div>number of items here</div>
+            <div className="cartCard"><CartArray /></div>
             <div>Array of items here</div>
         </div>
         </>

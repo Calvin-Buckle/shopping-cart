@@ -1,16 +1,11 @@
-// UpdateCart.js
-import React from "react";
-
 let cartArr = [];
 
 function UpdateCart({ product }) {
-  cartArr.push(product);
+    cartArr.push(product);
+  
+  
+    return cartArr; 
+  }
 
-  console.log("Cart:", cartArr);
-
-
-
-  return null; 
-}
-
-export default UpdateCart;
+  export { cartArr };
+  export default UpdateCart;
