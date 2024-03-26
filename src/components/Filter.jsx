@@ -1,4 +1,4 @@
-const callFilter = ({ isOpen , setIsOpen}) => {
+const CallFilter = ({ isOpen , setIsOpen}) => {
     const handleFilterChange = (e) => {
         console.log(e.target.value)
     };
@@ -21,4 +21,4 @@ const callFilter = ({ isOpen , setIsOpen}) => {
 };
 
 
-export default callFilter;
+export default CallFilter;
