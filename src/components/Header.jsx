@@ -9,13 +9,14 @@ function Header(){
         <>
 <div id="heading">
     <div id="headingsContainer">
-<div id="logo">LOGO</div>
-<div id="header">Fake Store API PROJECTs</div>
-</div>
+<div id="logo">Fake Api Store</div>
+<div id="header">API Project</div>
+
 <div id="buttonContainer">
-<Link to={'/'}><button id="homeButton">Home</button></Link>
-<Link to={'/store'}><button id="storeButton" >Store</button></Link>
-<Link to={'/cart'}><button id="cartButton">Cart</button></Link>
+<Link to={'/'}><button className="headerButtons">Home</button></Link>
+<Link to={'/store'}><button className="headerButtons" >Store</button></Link>
+<Link to={'/cart'}><button className="headerButtons">Cart</button></Link>
+</div>
 </div>
 </div>
 
