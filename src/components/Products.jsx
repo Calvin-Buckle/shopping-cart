@@ -1,8 +1,7 @@
-// Products.js
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import UpdateCart from "./UpdateCart";
 
-function Products() {
+function Products({ selected }) {
   const [dataArr, setDataArr] = useState([]);
 
   useEffect(() => {
@@ -12,7 +11,7 @@ function Products() {
       .catch(error => console.error('Error fetching data:', error));
   }, []);
 
-  function ProductCard({ product }) { 
+  function ProductCard({ product }) {
     return (
       <div className="productContainer">
         <div className="upperContainer">
@@ -33,9 +32,14 @@ function Products() {
   }
 
   function ProductArr() {
-    return dataArr.map((product, index) => (
-      <ProductCard key={index} product={product} />
-    ));
+    return dataArr.map((product, index) => {
+      if (selected === null || selected === 'all') {
+        return <ProductCard key={index} product={product} />;
+      } else if (product.category === selected) {
+        return <ProductCard key={index} product={product} />;
+      }
+      return null;
+    });
   }
 
   return (
