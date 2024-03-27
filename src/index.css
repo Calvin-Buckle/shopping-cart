@@ -51,6 +51,19 @@ padding:40px 20px 40px 40px;
 }
 
 
+#buttonContainer{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    flex-direction: row;
+    gap:25px;
+}
+
+#buttonContainer :hover{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
 
 .buttonContainer{
     display: flex;
