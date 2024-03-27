@@ -26,6 +26,8 @@ padding:40px 20px 40px 40px;
 .headerButtons{
     color: white;
     font-size: large;
+    font-weight: bolder;
+    border:none;
     background-color: rgb(0, 140, 255);
     width: 80px;
     height: 35px;
@@ -50,12 +52,13 @@ padding:40px 20px 40px 40px;
 
 
 
-#buttonContainer{
+.buttonContainer{
     display: flex;
+    align-items: center;
     height: 30px;
     flex-direction: row;
-    justify-content: flex-end;
-    gap:25px
+    gap:25px;
+
 }
 
 #storeBody{
@@ -125,6 +128,14 @@ font-weight: bold;
     flex-direction: column;
     border-radius: 30px;
     box-shadow: 0px 5px 10px 0px #000000a1;
+}
+
+
+.productQuantity{
+    width:40px;
+    height: 20px;
+    justify-content: center;
+
 }
 
 .cartCard{

@@ -1,10 +1,16 @@
+
+
+
 let cartArr = [];
 
-function UpdateCart({ product }) {
+function UpdateCart({ product, quantity}) {
+
+  for(let i = 0; i < quantity; i++){
     cartArr.push(product);
+  console.log(quantity) }
   
-  
-    return cartArr; 
+   
+    return cartArr;
   }
 
   export { cartArr };

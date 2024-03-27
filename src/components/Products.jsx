@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import UpdateCart from "./UpdateCart";
+import ProductQuantity from "./productQuantity";
+
+
 
 function Products({ selected }) {
   const [dataArr, setDataArr] = useState([]);
@@ -10,6 +12,11 @@ function Products({ selected }) {
       .then(json => setDataArr(json))
       .catch(error => console.error('Error fetching data:', error));
   }, []);
+
+
+
+
+
 
   function ProductCard({ product }) {
     return (
@@ -23,9 +30,8 @@ function Products({ selected }) {
           <div className="productRating">Rating {product.rating.rate}</div>
         </div>
         <div className="buttonContainer">
-          <button className="addToCart" onClick={() => UpdateCart({ product })}>
-            Add to Cart
-          </button>
+          
+         <ProductQuantity  product={product}/>
         </div>
       </div>
     );
