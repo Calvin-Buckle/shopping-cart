@@ -5,11 +5,12 @@ body{
     margin:0;
 }
 
-#heading{
+#heading {
     width: 1366px;
-    border:none;
-    background-color:white;
-}
+    border: none;
+    background-color: white;
+  }
+  
 #header{
     font-size: large;
     font-weight: bold;
@@ -54,15 +55,52 @@ padding:40px 20px 40px 40px;
 #buttonContainer{
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 30px;
     flex-direction: row;
     gap:25px;
 }
+#buttonContainer p{
+    height: 20px;
+    margin: 0px;
+}
 
-#buttonContainer :hover{
+#buttonContainer p:hover {
     text-decoration: underline;
     text-decoration-thickness: 3px;
 }
+#cartButton {
+    display: grid;
+    grid-template-columns: 50px 15px;
+    grid-template-rows: 3px 3px 3px;
+    gap: 5px;
+}
+
+#buttonContainer a{
+    text-decoration: none;
+}
+
+#cartButton p{
+    grid-column: 1/3;
+    grid-row: 3/4;
+    width: 60px;
+    justify-self: center;
+    align-self: center;
+}
+
+
+
+#totalQuantity {
+    height: 18px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: white;
+    color: rgb(0, 140, 255);
+    border-radius: 30px;
+    
+}
+
+
 
 
 .buttonContainer{
