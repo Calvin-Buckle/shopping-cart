@@ -1,21 +1,24 @@
 
 import Header from "./components/Header";
 import { CartArray } from "./components/CartItem";
-function Cart(){
 
-    
 
-    return ( 
-        <>
+function Cart() {
+
+
+
+
+    return (
+      <>
         <Header />
-        <div>
-            <div>Your shopping cart</div>
-            <div className="cartCard"><CartArray /></div>
-            <div>Array of items here</div>
+        <div id="cartContainer" >
+          <div id="cartHeader">Your shopping cart</div>
+       
+            <CartArray />
+        
         </div>
-        </>
-    )
-}
-
-
-export default Cart;
+      </>
+    );
+  }
+  
+  export default Cart;

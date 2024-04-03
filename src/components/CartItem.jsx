@@ -3,13 +3,13 @@
 import { cartArr } from './UpdateCart'; 
 
 
-function CartItem({ product }) {
+function CartItem({ product}) {
   return (
-    <div className="cartContainer">
+    <div className="itemContainer">
       <img src={product.image} alt={product.title} />
       <div>{product.name}</div>
-      <div>quantity</div>
-      <div>{product.price}</div>
+      <div>Quantity {product.quantity}</div>
+      <div>Price ({product.price})</div>
       <button>Remove</button>
     </div>
   );
@@ -39,7 +39,7 @@ console.log(uniqueProducts)
     
       {uniqueProducts.map((product) => (
         
-        <CartItem key={product.id} product={product} />
+        <CartItem key={product.id} product={product}  />
       ))}
     </>
   );

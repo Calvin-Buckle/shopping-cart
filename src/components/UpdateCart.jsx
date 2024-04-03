@@ -1,20 +1,13 @@
-
-
-
 let cartArr = [];
 
-
-function UpdateCart({ product, quantity}) {
-
-  for(let i = 0; i < quantity; i++){
+function UpdateCart({ product, quantity }) {
+  for (let i = 0; i < quantity; i++) {
     cartArr.push(product);
- 
-  console.log(quantity) }
-  
-   
-    return cartArr;
+    console.log(quantity);
   }
 
+  return cartArr;
+}
 
-  export { cartArr };
-  export default UpdateCart;
+export { cartArr };
+export default UpdateCart;
