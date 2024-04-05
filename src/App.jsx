@@ -1,10 +1,16 @@
+import { useState } from "react";
 import Header from "./components/Header";
+import ProductQuantity from "./components/productQuantity"
 
 
 function App() {
+
+  const [total, setTotal] = useState(0)
+
   return (
     <>
-      <Header />
+      <Header total={total} />
+      <ProductQuantity setTotal={setTotal} />
       <div id="homeParagraph">
         <p>
           Welcome to my store, this store was made as part of the Odin Project curriculum.

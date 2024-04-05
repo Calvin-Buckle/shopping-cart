@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import ProductQuantity from "./productQuantity";
 
-
-
 function Products({ selected }) {
   const [dataArr, setDataArr] = useState([]);
 
@@ -12,11 +10,6 @@ function Products({ selected }) {
       .then(json => setDataArr(json))
       .catch(error => console.error('Error fetching data:', error));
   }, []);
-
-
-
-
-
 
   function ProductCard({ product }) {
     return (
@@ -30,8 +23,8 @@ function Products({ selected }) {
           <div className="productRating">Rating {product.rating.rate}</div>
         </div>
         <div className="buttonContainer">
-          
-         <ProductQuantity  product={product}/>
+          {/* Pass product directly to ProductQuantity component */}
+          <ProductQuantity product={product} />
         </div>
       </div>
     );
