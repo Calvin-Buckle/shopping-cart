@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import UpdateCart from "./UpdateCart";
 
-function ProductQuantity({ product }) {
+function ProductQuantity({ product, increaseTotal }) {
   const [quantity, setQuantity] = useState(1);
 
   const handleQuantityChange = (e) => {
@@ -17,7 +17,10 @@ function ProductQuantity({ product }) {
     <>
       <button
         className="addToCart"
-        onClick={setNewTotal} // Corrected onClick handler
+        onClick={() => {
+          setNewTotal();
+          increaseTotal(quantity); //this is passed from Main to Store to Products then here
+        }}
       >
         Add to Cart
       </button>

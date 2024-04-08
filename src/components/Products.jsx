@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductQuantity from "./productQuantity";
 
-function Products({ selected }) {
+function Products({ selected, increaseTotal }) {
   const [dataArr, setDataArr] = useState([]);
 
   useEffect(() => {
@@ -23,8 +23,8 @@ function Products({ selected }) {
           <div className="productRating">Rating {product.rating.rate}</div>
         </div>
         <div className="buttonContainer">
-          {/* Pass product directly to ProductQuantity component */}
-          <ProductQuantity product={product} />
+          
+          <ProductQuantity product={product} increaseTotal={increaseTotal}/>
         </div>
       </div>
     );

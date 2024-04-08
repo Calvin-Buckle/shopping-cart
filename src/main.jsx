@@ -1,31 +1,36 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import App from './App'
-import Cart from './Cart'
-import Store from './Store'
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header'; 
+import App from './App';
+import Cart from './Cart';
+import Store from './Store';
+import './index.css';
 
+const Root = () => {
+  const [total, setTotal] = useState(0);
 
-import './index.css'
+  const increaseTotal = (quantity) => {
+    setTotal((prevTotal) => prevTotal + quantity);
+    
+  };
 
-const router = createBrowserRouter([
+  return (
+    <Router>
+      <div>
+        <Header total={total} />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/store" element={<Store increaseTotal={increaseTotal} />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+};
 
-  {
-    path: "/",
-    element: <App />
-  },
-  {
-    path: "store",
-    element: <Store />
-  },
-  {
-    path: "cart",
-    element: <Cart />
-  }
-])
-
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Root />
   </React.StrictMode>
 );

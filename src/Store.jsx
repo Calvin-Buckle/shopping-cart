@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import Header from "./components/Header";
 import Products from "./components/Products";
 
 
-const Store = () => {
+const Store = ({increaseTotal}) => {
   const [selected, setSelected] = useState('all');
 
   const handleFilterChange = (value) => {
@@ -12,7 +11,7 @@ const Store = () => {
 
   return (
     <>
-      <Header />
+  
       <div id="storeBody">
         <div id="container">
           <div id="storeHeading">
@@ -28,7 +27,7 @@ const Store = () => {
               </select>
             </div>
           </div>
-          <Products selected={selected} />
+          <Products selected={selected} increaseTotal={increaseTotal}/>
         </div>
       </div>
     </>
