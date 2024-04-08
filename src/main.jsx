@@ -14,6 +14,9 @@ const Root = () => {
     setTotal((prevTotal) => prevTotal + quantity);
     
   };
+  const decreaseTotal = () => {
+    setTotal((prevTotal) => prevTotal - 1)
+  }
 
   return (
     <Router>
@@ -22,7 +25,7 @@ const Root = () => {
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/store" element={<Store increaseTotal={increaseTotal} />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart decreaseTotal={decreaseTotal} />} />
         </Routes>
       </div>
     </Router>

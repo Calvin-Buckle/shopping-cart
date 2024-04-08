@@ -3,7 +3,7 @@
 import { CartArray } from "./components/CartItem";
 
 
-function Cart() {
+function Cart({decreaseTotal}) {
 
 
 
@@ -14,7 +14,7 @@ function Cart() {
         <div id="cartContainer" >
           <div id="cartHeader">Your shopping cart</div>
        
-            <CartArray />
+            <CartArray decreaseTotal={decreaseTotal} />
         
         </div>
       </>
